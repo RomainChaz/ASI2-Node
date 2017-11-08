@@ -9,7 +9,8 @@ module.exports = function(data, callback){
 	var cpt=1;
 	data.forEach(function (fileName) {		
 		var content = fs.readFileSync(path.join(presentationPath, fileName));
-		var obj = JSON.parse(content);
+		var obj = JSON.parse(content.toString());
+		console.dir(content.toString())		
 		var key = 'pres.' + cpt + '.' + obj.id;
 	  	listPres[key] = obj;
 	  	cpt++;
