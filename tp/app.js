@@ -7,6 +7,7 @@ process.env.CONFIG = JSON.stringify(CONFIG);
 
 var defaultRoute = require("./app/routes/default.route.js");
 var presentationRoute = require("./app/routes/presentation.route.js");
+var contentRouter = require("./app/routes/content.router.js");
 var getPresentations = require("./app/routes/modules/getPresentation.mod.js");
 var app = express();
 
@@ -14,9 +15,10 @@ var app = express();
 var server = http.createServer(app);
 app.use(defaultRoute);
 app.use(presentationRoute);
+app.use(contentRouter);
 
-app.use("/admin", express.static(path.join(__dirname, "public/admin")));
-app.use("/watch", express.static(path.join(__dirname, "public/watch")));
+app.use("/admin", express.static(path.join(__dirname, "./public/admin")));
+app.use("/watch", express.static(path.join(__dirname, "./public/watch")));
 
 server.listen(CONFIG.port);
 

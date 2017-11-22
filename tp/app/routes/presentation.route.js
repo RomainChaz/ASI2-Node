@@ -57,12 +57,7 @@ router.route("/savePres")
 				req.app.set('listPres', listPres);
 				
 				return response.json("Presentation added");
-			//}
-	
+			//}	
 		});
-	});
-
-	
-	
-	
+	});		
 });

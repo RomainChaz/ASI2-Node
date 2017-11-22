@@ -1,5 +1,5 @@
 {
   "port": 1337,
-  "contentDirectory": "/home/ubuntu/Project/tp-asi2-node/tp/content",
-  "presentationDirectory": "/home/ubuntu/Project/tp-asi2-node/tp/presentation"
+  "contentDirectory": "/home/ubuntu/Project/tp-asi2-node/tp/content/",
+  "presentationDirectory": "/home/ubuntu/Project/tp-asi2-node/tp/presentation/"
 }
